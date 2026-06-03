@@ -2,7 +2,7 @@
 
 ![Playwright](https://img.shields.io/badge/Playwright-1.44-green?logo=playwright)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)
-![CI](https://github.com/yourusername/playwright-automation-framework/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/PhonelinDev/playwright-automation-framework/actions/workflows/ci.yml/badge.svg)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
 A production-ready test automation framework built with **Playwright** and **TypeScript**, following the **Page Object Model (POM)** design pattern.
