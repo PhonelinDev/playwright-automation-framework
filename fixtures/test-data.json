@@ -1,0 +1,33 @@
+{
+  "users": {
+    "valid": {
+      "email": "testuser@example.com",
+      "password": "Test@1234",
+      "name": "Test User"
+    },
+    "invalid": {
+      "email": "wrong@example.com",
+      "password": "wrongpass"
+    }
+  },
+  "employees": {
+    "new": {
+      "firstName": "TestFirst",
+      "middleName": "TestMiddle",
+      "lastName": "TestLast"
+    },
+    "search": {
+      "existing": "Admin",
+      "notExist": "zzz_not_exist_zzz"
+    }
+  },
+   "leave": {
+    "apply": {
+      "leaveType": "CAN - Vacation",
+      "fromDate": "2026-08-01",
+      "toDate": "2026-08-01",
+      "comment": "Automation test leave"
+    }
+  }
+  
+}
