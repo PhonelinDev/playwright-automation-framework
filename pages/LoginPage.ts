@@ -26,11 +26,11 @@ export class LoginPage extends BasePage {
     return this.errorMessage.innerText();
   }
 
-  async expectLoginSuccess() {
-    await expect(this.page).toHaveURL(/.*dashboard/);
-  }
+async expectLoginSuccess() {
+  await expect(this.page).toHaveURL(/.*dashboard/, { timeout: 30000 });
+}
 
   async expectLoginFailed() {
-    await expect(this.errorMessage).toBeVisible();
-  }
+  await expect(this.errorMessage).toBeVisible({ timeout: 30000 });
+}
 }

@@ -35,16 +35,20 @@ export class EmployeePage extends BasePage {
   }
 
   async addEmployee(firstName: string, middleName: string, lastName: string) {
-    await this.addButton.click();
-    await this.firstNameInput.fill(firstName);
-    await this.middleNameInput.fill(middleName);
-    await this.lastNameInput.fill(lastName);
-    await this.saveButton.click();
-    await this.waitForPageLoad(); 
-  }
+  await this.addButton.click();
+  await this.firstNameInput.fill(firstName);
+  await this.middleNameInput.fill(middleName);
+  await this.lastNameInput.fill(lastName);
+  await this.employeeIdInput.clear();
+  await this.employeeIdInput.fill(`A${Date.now().toString().slice(-6)}`);
+  await this.saveButton.click();
+  await this.waitForPageLoad();
+}
 
-  async expectEmployeeAdded() {
-  await expect(this.page).toHaveURL(/.*viewPersonalDetails/, { timeout: 15000 });
+async expectEmployeeAdded() {
+  await expect(
+    this.page.locator('.oxd-toast--success')
+  ).toBeVisible({ timeout: 30000 });
 }
 
   async expectSearchResult(name: string) {

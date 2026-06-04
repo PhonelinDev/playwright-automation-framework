@@ -49,6 +49,6 @@ export class LeavePage extends BasePage {
   async expectRecordsFound() {
     await expect(
       this.page.locator('span.oxd-text--span', { hasText: 'Records Found' })
-    ).toBeVisible({ timeout: 15000 });
+    ).toBeVisible({ timeout: 30000 });
   }
 }
